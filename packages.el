@@ -73,7 +73,6 @@
           sly-repl-history-remove-duplicates t
           sly-repl-history-trim-whitespaces t
           sly-net-coding-system 'utf-8-unix)
-    (sly-setup '(sly-fancy))
     (spacemacs/set-leader-keys-for-major-mode 'lisp-mode
       "'" 'sly
       "ha" 'sly-apropos
@@ -126,7 +125,9 @@
             ("mm" . "macro")
             ("ms" . "repl")
             ("mS" . "stickers")
-            ("mt" . "trace")))))
+            ("mt" . "trace")))
+    :config
+    (sly-setup '(sly-fancy))))
 
 (defun common-lisp-sly/init-sly-mrepl ()
   (use-package sly-mrepl
